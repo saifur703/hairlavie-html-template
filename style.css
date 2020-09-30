@@ -1,0 +1,544 @@
+/*=================================
+Author: Md Saifur Rahman
+Updated: 30 September, 2020
+Notes: Hand Coded by https://fiverr.com/saifurpro
+===================================*/
+
+/*------Start Base CSS------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 solid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "Marko One", serif;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.fix:before,
+.fix:after {
+  content: "";
+  display: table;
+}
+
+.fix:after {
+  clear: both;
+}
+
+/*------End Base CSS------*/
+
+.header {
+  box-shadow: 0 2px 20px 0 rgba(140, 158, 214, 0.2);
+  padding: 10px 0;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.header-right {
+  padding: 8px 0;
+}
+
+.header-right .phone-number {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.header-right .phone-number:hover {
+  text-decoration: underline;
+}
+
+.header-right .phone-number i.fa {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.boxed-btn {
+  display: inline-block;
+  background: #ff647f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.boxed-btn:hover {
+  box-shadow: -4px 7px 19px 0 rgba(255, 97, 151, 0.5);
+  color: #fff;
+}
+
+.banner-title h1 {
+  font-size: 60px;
+  color: #000;
+  margin: 70px 0;
+}
+
+.banner-list {
+  padding-top: 60px;
+}
+
+.banner-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.banner-list li {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 33px;
+  color: #000;
+  position: relative;
+  padding-left: 50px;
+}
+
+.banner-list li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/img/circle-check-icon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-right p.results-disclaimer {
+  font-family: "Open Sans", sans-serif;
+}
+
+.offer-area {
+  position: relative;
+  z-index: 1;
+}
+
+.offer-area::before {
+  position: absolute;
+  top: 350px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 758px;
+  height: 1178px;
+  background-image: url("assets/img/triangle-left-blue.png");
+  background-repeat: no-repeat;
+  background-size: 758px 1178px;
+  background-position: 0 bottom;
+  z-index: -1;
+}
+
+.single-offer-box {
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 5px 40px 0 rgba(123, 132, 159, 0.2);
+  transition: 0.4s;
+  text-align: center;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.arrow-down {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-height: 240px;
+  z-index: -1;
+  display: block;
+  fill: #eaeef2;
+  border-radius: 5px;
+}
+
+.single-offer-box.color2 .arrow-down {
+  fill: #e5faf9 !important;
+}
+
+.single-offer-box-head h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.single-offer-box-head {
+  font-size: 18px;
+}
+
+.single-offer-box-head img {
+  max-width: 160px;
+  margin-bottom: 5px;
+}
+
+.single-offer-box-body .price {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1;
+}
+
+.single-offer-box-body .msrp {
+  text-decoration: line-through;
+  color: #6d7278;
+}
+
+.single-offer-box-body .savings {
+  font-size: 24px;
+  color: #fb7e81;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.single-offer-box-body .boxed-btn {
+  background-color: #2ed2cb;
+  display: block;
+  border-radius: 0;
+  border: 1px solid #000;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.single-offer-box-body .boxed-btn:hover {
+  box-shadow: none;
+}
+
+.single-offer-box-body .shipping {
+  font-size: 21px;
+  color: #6d7278;
+}
+
+.single-offer-box-body {
+  color: #6d7278;
+}
+
+.single-offer-box:hover {
+  background-color: #eaeef2;
+}
+
+.single-offer-box.color2:hover {
+  background-color: #e5faf9;
+}
+
+.offer-tab-box {
+  border: 1px solid #ddd;
+  margin: 30px 0;
+  background-color: #fff;
+}
+
+.offer-tab-box .tab-content {
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+
+.offer-tab-box .nav-tabs .nav-link {
+  border: 1px solid #ddd;
+  padding: 20px 40px;
+  border-radius: 0;
+  box-shadow: inset -4px -4px 10px 0 rgba(43, 54, 53, 0.18);
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  width: 50%;
+  text-align: center;
+}
+
+.offer-tab-box .nav-tabs .nav-link.active {
+  box-shadow: 0 0 BLACK;
+}
+
+.offer-tab-box .nav-tabs .nav-link span {
+  color: #00d3cc;
+}
+
+#subscribe-nav .single-offer-box-head h3 {
+  font-size: 40px;
+}
+
+.heading-1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.heading-2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 37px;
+}
+
+.burst-90-day-area h2 {
+  font-size: 55px;
+  color: #f97a81;
+  margin-bottom: 50px;
+}
+
+.burst-90-day-area {
+  color: #000;
+  font-size: 32px;
+  line-height: 1.3;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.burst-90-day-area::after {
+  position: absolute;
+  content: "";
+  right: 30px;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: url("assets/img/90-day.png") no-repeat scroll center center / contain;
+}
+
+.testimonial-area {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-area h2 {
+  font-size: 60px;
+  color: #00d5cc;
+  margin-bottom: 30px;
+}
+
+.single-testimonial {
+  font-size: 16px;
+  color: #000;
+  position: relative;
+  margin: 30px 0;
+}
+
+.single-testimonial img {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  max-width: 64px;
+}
+
+.single-testimonial-content {
+  padding-left: 100px;
+}
+
+.single-testimonial-content small {
+  color: #000;
+}
+
+.two-column-area {
+  padding: 30px 0;
+  color: #000;
+  font-size: 32px;
+}
+
+.two-column-area h2 {
+  color: #f97a81;
+  font-size: 60px;
+  margin-bottom: 35px;
+}
+
+.two-column-area p {
+  margin-bottom: 30px;
+}
+
+.two-column-area img {
+  margin-top: 100px;
+}
+
+.faq-area h2 {
+  font-size: 60px;
+  color: #00d5cc;
+}
+
+.faq-area h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.faq-area {
+  font-size: 20px;
+  color: #000;
+  padding-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-area::after {
+  position: absolute;
+  content: "";
+  right: 15%;
+  top: 35%;
+  width: 40%;
+  height: 480px;
+  background: url("assets/img/clinical-formula-bottle-tilted.png") no-repeat scroll center center / contain;
+  z-index: -1;
+}
+
+.faq-area::before {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 637px;
+  height: 1006px;
+  background-image: url("assets/img/triangle-right-pink.png");
+  background-repeat: no-repeat;
+  background-size: 637px 1006px;
+  background-position: 0 center;
+  z-index: -1;
+}
+
+.faq-area img {
+  margin: 15px 0;
+  max-width: 350px;
+}
+
+.one-column-area {
+  padding: 15px 0;
+  color: #000;
+  font-size: 32px;
+}
+
+.one-column-area h2 {
+  font-size: 60px;
+  color: #00d3cc;
+  margin-bottom: 30px;
+}
+
+.one-column-area img {
+  margin: 30px 0;
+}
+
+.one-column-btn .boxed-btn {
+  color: #fff;
+  padding: 20px 120px;
+  font-size: 24px;
+  border-radius: 50px;
+}
+
+.one-column-btn {
+  margin-top: 50px;
+}
+
+.icon-list-area {
+  padding: 15px 0 100px;
+}
+
+.icon-list-area a {
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.footer-area {
+  background: #fff;
+  box-shadow: 0 -2px 20px 0 rgba(140, 158, 214, 0.2);
+  padding: 50px 0;
+}
+
+.footer-area ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.footer-area ul li {
+  display: inline-block;
+}
+
+.footer-area ul li a {
+  display: block;
+  color: #000;
+  font-size: 14px;
+}
+
+.footer-area ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-area p {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.footer-area p.advertising {
+  text-transform: uppercase;
+}
+
+.footer-area p.advertising a {
+  color: #2993fb;
+  text-transform: capitalize;
+  font-weight: 700;
+}
